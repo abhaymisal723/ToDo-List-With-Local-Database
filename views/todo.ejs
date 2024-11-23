@@ -15,7 +15,7 @@
       <form action="/" method="post" class="form">
         <input type="text" name="title" placeholder="Title" required />
         <input type="text" name="description" placeholder="Description" required />
-        <button type="submit">ADD</button>
+        <div><button type="submit">ADD</button></div>
       </form>
 
       <!-- Displaying tasks -->
@@ -23,10 +23,10 @@
       <div class="list">
         <div class="entry">
           <h2><%= tasks[i].title %></h2>
-          <p><%= tasks[i].description %></p>
+          <h4><%= tasks[i].description %></h4>
           <!-- Edit and Delete links using task ID -->
-          <a href="/edit/<%= tasks[i].id %>">Edit</a>
-          <a href="/delete/<%= tasks[i].id %>">Delete</a>
+          <a href="/edit/<%= tasks[i].id %>"><button>Edit</button></a>
+          <a href="/delete/<%= tasks[i].id %>"><button>Delete</button></a>
         </div>
       </div>
       <% } %>

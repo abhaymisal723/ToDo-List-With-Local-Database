@@ -1,22 +1,44 @@
 body {
     margin: 25px;
     padding: 0px;
-    background-color: salmon;
+    background-image: url('../Desk-Image4.jpg');
+    background-size: cover;       /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed during scroll */
   }
   
-  .home {
-    padding: 2rem;
+  .home h1 {
+    margin: 25px 15px ;
+    text-align: center;
+    color: whitesmoke
   }
   
   .form {
-    margin: 10px 10px;
+    margin: 25px 15px ;
+    text-align: center;
+  }
+
+  .form input {
+    margin: 0px 15px 15px 15px;
+    font-size: large;
+    border-radius: 5px;
+  }
+
+  .form div button {
+    font-size: large;
+    background-color: rgb(30, 203, 85);
+    border-radius: 10px;
   }
 
   .entry {
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 1px ;
-    border-color: black;
-    border-radius: 5px;
+    margin: 5rem 0rem 5rem 20rem;
+  }
+
+  .entry a {
+    margin: 0rem 2rem 0rem 0rem;
+  }
+
+  .entry a button {
+    font-size: medium;
   }

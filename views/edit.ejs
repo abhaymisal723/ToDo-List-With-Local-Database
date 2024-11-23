@@ -14,8 +14,7 @@
       <!-- Form to edit the selected task -->
       <% for (let i = 0; i < tasks.length; i++) { 
         if (tasks[i].id == id) { %>
-      <div class="entry">
-        <form action="/edit/<%= id %>" method="post">
+        <form action="/edit/<%= id %>" method="post" class="form">
           <input
             type="text"
             name="title"
@@ -30,9 +29,8 @@
             value="<%= tasks[i].description %>"
             required
           />
-          <button type="submit">Update</button>
+          <div><button type="submit">Update</button></div>
         </form>
-      </div>
       <% } } %>
       
       <div class="list">
@@ -40,9 +38,9 @@
           if (tasks[i].id != id) { %>
         <div class="entry">
           <h2><%= tasks[i].title %></h2>
-          <p><%= tasks[i].description %></p>
-          <a href="/edit/<%= tasks[i].id %>">Edit</a>
-          <a href="/delete/<%= tasks[i].id %>">Delete</a>
+          <h4><%= tasks[i].description %></h4>
+          <a href="/edit/<%= tasks[i].id %>"><button>Edit</button></a>
+          <a href="/delete/<%= tasks[i].id %>"><button>Delete</button></a>
         </div>
         <% } } %>
       </div>
