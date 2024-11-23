@@ -1,0 +1,6 @@
+1. Clone the Repo
+2. Install packages using 'npm install'
+3. Run 'npm run start' to start the localhost
+
+1. In this repo, I have created a local database using JSON file. 
+2. JSON File act as the array of tasks. And we can perform CRUD operations on this database. 
