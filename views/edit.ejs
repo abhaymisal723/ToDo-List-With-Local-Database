@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Edit Task</title>
+  </head>
+  <body>
+    <div class="home">
+      <h1>Edit Task</h1>
+
+      <!-- Form to edit the selected task -->
+      <% for (let i = 0; i < tasks.length; i++) { 
+        if (tasks[i].id == id) { %>
+      <div class="entry">
+        <form action="/edit/<%= id %>" method="post">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            value="<%= tasks[i].title %>"
+            required
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            value="<%= tasks[i].description %>"
+            required
+          />
+          <button type="submit">Update</button>
+        </form>
+      </div>
+      <% } } %>
+      
+      <div class="list">
+        <% for (let i = 0; i < tasks.length; i++) { 
+          if (tasks[i].id != id) { %>
+        <div class="entry">
+          <h2><%= tasks[i].title %></h2>
+          <p><%= tasks[i].description %></p>
+          <a href="/edit/<%= tasks[i].id %>">Edit</a>
+          <a href="/delete/<%= tasks[i].id %>">Delete</a>
+        </div>
+        <% } } %>
+      </div>
+    </div>
+  </body>
+</html>

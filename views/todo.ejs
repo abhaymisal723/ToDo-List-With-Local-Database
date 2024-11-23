@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>ToDo List for Abhay</title>
+  </head>
+  <body>
+    <div class="home">
+      <h1>ToDo List for Abhay</h1>
+
+      <!-- Form to add a new task -->
+      <form action="/" method="post" class="form">
+        <input type="text" name="title" placeholder="Title" required />
+        <input type="text" name="description" placeholder="Description" required />
+        <button type="submit">ADD</button>
+      </form>
+
+      <!-- Displaying tasks -->
+      <% for (let i = tasks.length - 1; i >= 0; i--) { %>
+      <div class="list">
+        <div class="entry">
+          <h2><%= tasks[i].title %></h2>
+          <p><%= tasks[i].description %></p>
+          <!-- Edit and Delete links using task ID -->
+          <a href="/edit/<%= tasks[i].id %>">Edit</a>
+          <a href="/delete/<%= tasks[i].id %>">Delete</a>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

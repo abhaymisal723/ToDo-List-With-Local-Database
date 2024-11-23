@@ -1,0 +1,22 @@
+body {
+    margin: 25px;
+    padding: 0px;
+    background-color: salmon;
+  }
+  
+  .home {
+    padding: 2rem;
+  }
+  
+  .form {
+    margin: 10px 10px;
+  }
+
+  .entry {
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px ;
+    border-color: black;
+    border-radius: 5px;
+  }
